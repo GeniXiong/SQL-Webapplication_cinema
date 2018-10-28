@@ -17,5 +17,5 @@ Team members:
 * Create account (optional)
 > input name, address, email, etc.
 
-* SQL database. 
-* Flask (Python API)
+#### SQL database. 
+#### Flask (Python API)
