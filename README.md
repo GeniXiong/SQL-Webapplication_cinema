@@ -19,5 +19,5 @@ Team members:
 
 
 #### TOOLS
-> SQL database. 
-> Flask (Python API)
+* SQL database. 
+* Flask (Python API)
