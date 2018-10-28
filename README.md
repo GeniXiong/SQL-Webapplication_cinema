@@ -1,7 +1,7 @@
 # SQL-Webapplication_cinema
-Cinema Schedule: Web front page for client and back-end SQL database
-#### Worcester Polytechnic Institute
-#### CS 513 Computer Networks | Fall 2018
+> Cinema Schedule: Web front page for client and back-end SQL database
+> Worcester Polytechnic Institute
+> CS 513 Computer Networks | Fall 2018
 
 Team members: 
 * Wei Xiong 
@@ -17,5 +17,7 @@ Team members:
 * Create account (optional)
 > input name, address, email, etc.
 
-#### SQL database. 
-#### Flask (Python API)
+
+#### TOOLS
+> SQL database. 
+> Flask (Python API)
