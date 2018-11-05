@@ -19,5 +19,7 @@ Team members:
 
 
 #### TOOLS
-* SQL database. 
-* Flask (Python API)
+* MySQL database 
+* Flask
+* Python 3.7
+* Jinja2
