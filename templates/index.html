@@ -1,18 +1,43 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+    <head>
+        <title>Cinema Schedule | Home page</title>
+    </head>
+	
+    <body>
+<h2>HTML Forms</h2>
 
-<h1>My First Heading {{name}}</h1>
+<form action="/selection", method = "POST">
 
-<p>My first paragraph.</p>
-<form action="/login" method="post">
-  Username:<br>
-  <input type="text" name="username" value="Mickey">
+  <input type="text" name="date" value="please input a date">
   <br>
-  pwd:<br>
-  <input type="text" name="password" value="Mouse">
-  <br><br>
-  <input type="submit" value="Submit">
+  <select name = "type">
+  Type:<br>
+  <option value="comedy">Comedy
+  <option value="horror">Horror
+  <option value="action">Action
+  <option value="drama">Drama	   
+  <br>
+  </select>
+  <input type="checkbox" name="rate" value="4">Higher than 4.0
+  <select name = "price">
+   Price:<br>
+  <option  value="10"> less than $11
+  <option  value="15">$11 ~ $16
+  <option value="20">more than $16	   
+  <br>
+  </select>
+  <input type = "submit" name  = "submit" value = "Go!" >
 </form> 
-</body>
+
+<p>If you click the "Go!" , the form-data will be sent to MySQL and query results will be returned.</p>
+ 
+<div>
+<ul>
+{% for n in content %}
+  <li>{{n}}</li>
+{% endfor %}
+</ul> 
+</div>
+    </body>
 </html>

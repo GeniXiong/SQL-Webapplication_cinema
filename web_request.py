@@ -11,21 +11,29 @@ import connector as con
 app = Flask(__name__)
 
 # =============================================================================
-# root address to shwo the fancy webpage design for cinema schedule
+# root address to show the fancy webpage design for cinema schedule
 # ip address: http://127.0.0.1:5000/ 
 # =============================================================================
 @app.route('/')
 def index():
-	return render_template('index.html')
+	return render_template('index.html', content = '')
 
-@app.route('/login', methods = ['POST'])
-def login():
-    if con.check_login(request.form['username'] , request.form['password']):
-        return('successful login!')
-    # the code below is executed if the request method
-    # was GET or the credentials were invalid
-    else:
-        return('Failed, please try again!')
+@app.route('/selection', methods = ['POST'])
+def select_cinema():
+   if request.method == 'POST':
+       received_data = request.form
+       if 'rate' in received_data:
+           rate = received_data['rate']
+       else:
+           rate = ''
+       date = request.form['date']
+       m_type = request.form['type']
+       price = request.form['price']
+       result_list = con.check_movie(date, m_type, rate, price)
+       #result_list = [date, m_type, rate, price]
+       return render_template("index.html", content = result_list)
+   return ''
+    
     
 if __name__ == '__main__':
     app.run()

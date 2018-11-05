@@ -18,14 +18,23 @@ def check_login(name, pwd):
     else:
         return False
 
+def check_movie(date, m_type, rate, price):
+    m_list = []
+    sql = "SELECT M.mname FROM cinema.schedule S, cinema.movie M WHERE M.mid = S.mid and " \
+          "S.date = %s and M.type = %s and M.rate > %s and  S.price = %s"
+    adr = (date, m_type, rate, price)
+    mycursor.execute(sql, adr)
+    m_result = mycursor.fetchall()
+    for x in m_result:
+        m_list.append(x[0])
+    return m_list
+
     
-#if __name__ == '__main__':
-#    mydb = mysql.connector.connect(
-#      host="localhost",
-#      user="root",
-#      passwd="xw55555"
-#    )
-#    mycursor = mydb.cursor()
-#
-#    
-#    mycursor.execute(sql, adr)
+if __name__ == '__main__':
+    res = check_movie('7/23/2016', 'Horror', 4, 10)
+    for r in res:
+        print(r)
+
+
+
+    
