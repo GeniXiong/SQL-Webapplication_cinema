@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Movie | WPI</title>
+        <title>Movie WPI | Special Date</title>
         <meta name="description" content="GARO is a real-estate template">
         <meta name="author" content="Kimarotec">
         <meta name="keyword" content="html5, css, bootstrap, property, real-estate theme , bootstrap template">
@@ -78,15 +78,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="http://127.0.0.1:5000/"><img src={{ url_for('static', filename='assets/img/Gompei_all.jpg')}} alt=""></a>
+                    <a class="navbar-brand" href="index.html"><img src="assets/img/Gompei_all.png" alt=""></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse yamm" id="navigation">
-<!--                     <div class="button navbar-right">
-                        <button class="navbar-btn nav-button wow bounceInRight login" onclick=" window.open('register.html')" data-wow-delay="0.45s">Login</button>
-                        <button class="navbar-btn nav-button wow fadeInRight" onclick=" window.open('submit-property.html')" data-wow-delay="0.48s">Submit</button>
-                    </div> -->
+
                     <ul class="main-nav nav navbar-nav navbar-right">
                         <li class="dropdown ymm-sw " data-wow-delay="0.1s">
                             <li class="wow fadeInDown" data-wow-delay="0.2s"><a class="" href="http://127.0.0.1:5000/">Home</a></li>
@@ -94,7 +91,7 @@
 
                         <li class="wow fadeInDown" data-wow-delay="0.2s"><a class="" href="/movie">Special Movie</a></li>
                         <li class="wow fadeInDown" data-wow-delay="0.3s"><a class="" href="/special_date">Special Date</a></li>
-
+                     
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -114,17 +111,38 @@
             <div class="slider-content">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
-                        <h2>Find your special movie</h2>
+                        <h2>Find your special date</h2>
                         <p>Enjoy life and movie!!</p>
                         <div class="search-form wow pulse" data-wow-delay="0.8s">
 
-                            <form action="/selection" method = "POST" class=" form-inline">
+                            <form action="" class=" form-inline">
                                 <button class="btn  toggle-btn" type="button"><i class="fa fa-bars"></i></button>
 
-                                <div class="form-group">
-                                    <input type="text" class="form-control" value = "" placeholder="movie key word" >
+                                <div class="searchFrom1" >                                   
+                                    <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select Theater">
+                                        <option>New york, CA</option>
+                                        <option>Paris</option>
+                                        <option>Casablanca</option>
+                                        <option>Tokyo</option>
+                                        <option>Marraekch</option>
+                                        <option>kyoto , shibua</option>
+                                    </select>
                                 </div>
- 
+<!--                                 <div class="searchFrom1">
+                                    <input type="text" class="form-control" placeholder="Key word">
+                                </div> -->
+                                <div class="searchFrom1">                                   
+                                    <input type="date" class="form-control" data-date-inline-picker="true">
+                                </div>
+                                <div class="searchFrom1">                                     
+                                    <select id="basic" class="selectpicker show-tick form-control">
+                                        <option> -Type- </option>
+                                        <option>Rent </option>
+                                        <option>Boy</option>
+                                        <option>used</option>  
+
+                                    </select>
+                                </div>                             
                                 <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
                             </form>
                         </div>
@@ -132,8 +150,7 @@
                 </div>
             </div>
         </div>
-		
-		<!-- query results area -->
+				<!-- query results area -->
 		<div class="content-area home-area-1 recent-property" style="background-color: #FCFCFC; padding-bottom: 55px;">
         <div class="container">
 		<div class="row">
@@ -155,8 +172,9 @@
 			</div>
 			{% endfor %}
 		</div></div></div>
+		
         <!-- property area -->
-        <div class="content-area home-area-1 recent-property" style="background-color: #FCFCFC; padding-bottom: 55px;">
+         <div class="content-area home-area-1 recent-property" style="background-color: #FCFCFC; padding-bottom: 55px;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
@@ -231,9 +249,9 @@
             </div>
         </div>
 
- 
+
         <!-- Footer area-->
-        <div class="footer-area">
+         <div class="footer-area">
 
             <div class=" footer">
                 <div class="container">

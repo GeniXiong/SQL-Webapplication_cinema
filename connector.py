@@ -31,10 +31,7 @@ def check_movie(date, m_type, rate, price):
 
     
 if __name__ == '__main__':
-    res = check_movie('7/23/2016', 'Horror', 4, 10)
-    for r in res:
-        print(r)
-
+    check_login_movie('fjgj')
 
 
     
