@@ -54,6 +54,11 @@ def movie_detail():
 def special_date():
     return render_template('special_date.html')
 
+@app.route('/test', methods = ['POST', 'GET'])
+def print_date():
+    received_data = request.form
+    print (received_data)
+    return render_template('special_date.html')
 
 if __name__ == '__main__':
     app.run()

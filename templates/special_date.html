@@ -115,29 +115,30 @@
                         <p>Enjoy life and movie!!</p>
                         <div class="search-form wow pulse" data-wow-delay="0.8s">
 
-                            <form action="" class=" form-inline">
+                            <form action="/test" class=" form-inline" method = "POST">
                                 <button class="btn  toggle-btn" type="button"><i class="fa fa-bars"></i></button>
 
                                 <div class="searchFrom1" >                                   
-                                    <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select Theater">
-                                        <option>New york, CA</option>
-                                        <option>Paris</option>
-                                        <option>Casablanca</option>
-                                        <option>Tokyo</option>
-                                        <option>Marraekch</option>
-                                        <option>kyoto , shibua</option>
+                                    <select id="lunchBegins" name = "theater" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select Theater">
+                                        <option value = "theater1">New york, CA</option>
+                                        <option value = "theater2">Paris</option>
+                                        <option value = "">Casablanca</option>
+                                        <option value = "">Tokyo</option>
+                                        <option value = "">Marraekch</option>
+                                        <option value = "">kyoto , shibua</option>
                                     </select>
                                 </div>
 <!--                                 <div class="searchFrom1">
                                     <input type="text" class="form-control" placeholder="Key word">
                                 </div> -->
+
                                 <div class="searchFrom1">                                   
-                                    <input type="date" class="form-control" data-date-inline-picker="true">
+                                    <input type="date" name="date_time" id="datepicker" class="form-control" data-date-inline-picker="true">
                                 </div>
                                 <div class="searchFrom1">                                     
-                                    <select id="basic" class="selectpicker show-tick form-control">
-                                        <option> -Type- </option>
-                                        <option>Rent </option>
+                                    <select id="basic" name = "type" class="selectpicker show-tick form-control">
+                                        <option value = "type1"> -Type- </option>
+                                        <option value = "type2">Rent </option>
                                         <option>Boy</option>
                                         <option>used</option>  
 
@@ -150,6 +151,7 @@
                 </div>
             </div>
         </div>
+
 				<!-- query results area -->
 		<div class="content-area home-area-1 recent-property" style="background-color: #FCFCFC; padding-bottom: 55px;">
         <div class="container">
@@ -355,6 +357,7 @@
         <script src={{ url_for('static', filename='assets/js/icheck.min.js')}}></script>
         <script src={{ url_for('static', filename='assets/js/price-range.js')}}></script>
         <script src={{ url_for('static', filename='assets/js/main.js')}}></script>
+		
 
     </body>
 </html>
